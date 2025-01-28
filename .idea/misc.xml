@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/CG-Library-Microservice/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/CG-Library-Microservice/bookservice/pom.xml" />
+        <option value="$PROJECT_DIR$/CG-Library-Microservice/borrowingservice/pom.xml" />
+        <option value="$PROJECT_DIR$/CG-Library-Microservice/commonservice/pom.xml" />
+        <option value="$PROJECT_DIR$/CG-Library-Microservice/configserver/pom.xml" />
+        <option value="$PROJECT_DIR$/CG-Library-Microservice/discoverserver/pom.xml" />
+        <option value="$PROJECT_DIR$/CG-Library-Microservice/employeeservice/pom.xml" />
+        <option value="$PROJECT_DIR$/CG-Library-Microservice/notificationservice/pom.xml" />
+        <option value="$PROJECT_DIR$/CG-Library-Microservice/userservice/pom.xml" />
+        <option value="$PROJECT_DIR$/Event-Driven Microservices, CQRS, SAGA, Axon, Spring Boot/ApiGateway/pom.xml" />
+        <option value="$PROJECT_DIR$/Event-Driven Microservices, CQRS, SAGA, Axon, Spring Boot/core-spring-boot-3-update/pom.xml" />
+        <option value="$PROJECT_DIR$/Event-Driven Microservices, CQRS, SAGA, Axon, Spring Boot/DiscoveryServer/pom.xml" />
+        <option value="$PROJECT_DIR$/Event-Driven Microservices, CQRS, SAGA, Axon, Spring Boot/estore-users-service-spring-boot-3-update/pom.xml" />
+        <option value="$PROJECT_DIR$/Event-Driven Microservices, CQRS, SAGA, Axon, Spring Boot/OrdersService-spring-boot-3-update/pom.xml" />
+        <option value="$PROJECT_DIR$/Event-Driven Microservices, CQRS, SAGA, Axon, Spring Boot/PaymentsService-spring-boot-3-update/pom.xml" />
+        <option value="$PROJECT_DIR$/Event-Driven Microservices, CQRS, SAGA, Axon, Spring Boot/ProductsService-spring-boot-3-update/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-eventsourcing/apigateway/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-eventsourcing/bookservice/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-eventsourcing/borrowingservice/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-eventsourcing/commonservice/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-eventsourcing/discoverserver/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-eventsourcing/employeeservice/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-eventsourcing/notificationservice/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

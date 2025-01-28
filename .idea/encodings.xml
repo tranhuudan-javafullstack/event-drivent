@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/project1/api-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project1/bookservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project1/borrowingservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project1/commonservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project1/configserver/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project1/discoverserver/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project1/employeeservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project1/notificationservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project1/userservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project2/apigateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project2/coreservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project2/discoveryserver/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project2/orderservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project2/paymentservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project2/productservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project2/userservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project3/apigateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project3/bookservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project3/borrowingservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project3/commonservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project3/discoverserver/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project3/employeeservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/project3/notificationservice/src/main/java" charset="UTF-8" />
+  </component>
+</project>
