@@ -4,7 +4,7 @@ develop Event Driven Microservices using Spring Boot, Axon framework, CQRS, Saga
 ## Topics covered in the course
 * Section 1 - Database-per-service pattern
 * Section 3 - Implementing CQRS and Event Sourcing patterns
-* Section 4 - Materialized View Pattern
+* Section 4 - Materialized View Pattern vs outbox pattern
 * Section 5 - Choreography Saga pattern
 * Section 6 - Orchestration Saga pattern
 * Section 7 - Snapshots in Event sourcing pattern 

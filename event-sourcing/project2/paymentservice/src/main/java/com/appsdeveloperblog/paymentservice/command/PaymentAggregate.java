@@ -5,6 +5,7 @@
  */
 package com.appsdeveloperblog.paymentservice.command;
 
+import lombok.NoArgsConstructor;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
@@ -15,6 +16,7 @@ import com.appsdeveloperblog.estore.core.commands.ProcessPaymentCommand;
 import com.appsdeveloperblog.estore.core.events.PaymentProcessedEvent;
 
 @Aggregate
+@NoArgsConstructor
 public class PaymentAggregate {
 
     @AggregateIdentifier
@@ -22,8 +24,7 @@ public class PaymentAggregate {
 
     private String orderId;
     
-    public PaymentAggregate() { }
-    
+
     @CommandHandler
     public PaymentAggregate(ProcessPaymentCommand processPaymentCommand){
 

@@ -9,18 +9,20 @@ import com.huudan.cards.exception.ResourceNotFoundException;
 import com.huudan.cards.mapper.CardsMapper;
 import com.huudan.cards.repository.CardsRepository;
 import com.huudan.cards.service.ICardsService;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @Service
 public class CardsServiceImpl implements ICardsService {
 
-    private final CardsRepository cardsRepository;
+    CardsRepository cardsRepository;
 
-    public CardsServiceImpl(CardsRepository cardsRepository) {
-        this.cardsRepository = cardsRepository;
-    }
 
     /**
      * @param card - Cards object

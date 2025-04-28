@@ -8,19 +8,20 @@ import com.huudan.accounts.exception.ResourceNotFoundException;
 import com.huudan.accounts.mapper.AccountsMapper;
 import com.huudan.accounts.repository.AccountsRepository;
 import com.huudan.accounts.service.IAccountsService;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.Random;
 
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @Service
 public class AccountsServiceImpl implements IAccountsService {
 
-    private final AccountsRepository accountsRepository;
-
-    public AccountsServiceImpl(AccountsRepository accountsRepository) {
-        this.accountsRepository = accountsRepository;
-    }
+    AccountsRepository accountsRepository;
 
     /**
      * @param mobileNumber - String

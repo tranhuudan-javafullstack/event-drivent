@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="accounts (5)" />
+        <module name="accounts (1)" />
+        <module name="common (5)" />
+        <module name="OrdersService" />
+        <module name="borrowingservice (1) (com.ltfullstack)" />
+        <module name="customer (6)" />
+        <module name="gatewayserver (3)" />
+        <module name="common (1)" />
+        <module name="ProductsService" />
+        <module name="customer (2)" />
+        <module name="discoverserver" />
+        <module name="gatewayserver" />
+        <module name="loans (2)" />
+        <module name="cards (3)" />
+        <module name="borrowingservice" />
+        <module name="eurekaserver (3)" />
+        <module name="accounts (6)" />
+        <module name="DiscoveryServer" />
+        <module name="commonservice (1) (com.ltfullstack)" />
+        <module name="accounts (2)" />
+        <module name="loans" />
+        <module name="profile" />
+        <module name="common (6)" />
+        <module name="cards (5)" />
+        <module name="gatewayserver (2)" />
+        <module name="common (2)" />
+        <module name="customer (3)" />
+        <module name="gatewayserver (6)" />
+        <module name="apigateway" />
+        <module name="core" />
+        <module name="loans (3)" />
+        <module name="cards (4)" />
+        <module name="eurekaserver (4)" />
+        <module name="cards" />
+        <module name="accounts (3)" />
+        <module name="common (3)" />
+        <module name="loans (5)" />
+        <module name="cards (6)" />
+        <module name="customer (4)" />
+        <module name="gatewayserver (1)" />
+        <module name="gatewayserver (5)" />
+        <module name="eurekaserver" />
+        <module name="common" />
+        <module name="cards (1)" />
+        <module name="loans (4)" />
+        <module name="discoverserver (1) (com.ltfullstack)" />
+        <module name="eurekaserver (5)" />
+        <module name="paymentservice" />
+        <module name="bookservice" />
+        <module name="eurekaserver (1)" />
+        <module name="commonservice" />
+        <module name="accounts (4)" />
+        <module name="UsersService" />
+        <module name="gatewayserver (4)" />
+        <module name="bookservice (1) (com.ltfullstack)" />
+        <module name="loans (6)" />
+        <module name="common (4)" />
+        <module name="customer (5)" />
+        <module name="customer (1)" />
+        <module name="notificationservice (1) (com.ltfullstacak)" />
+        <module name="employeeservice (1) (com.ltfullstack)" />
+        <module name="eurekaserver (6)" />
+        <module name="loans (1)" />
+        <module name="cards (2)" />
+        <module name="eurekaserver (2)" />
+        <module name="employeeservice" />
+        <module name="accounts" />
+        <module name="notificationservice" />
+        <module name="customer" />
+      </profile>
+      <profile name="Annotation profile for profileservice" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="mapstruct.defaultComponentModel" value="spring" />
+        <option name="mapstruct.suppressGeneratorTimestamp" value="true" />
+        <option name="mapstruct.verbose" value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok-mapstruct-binding/0.2.0/lombok-mapstruct-binding-0.2.0.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
+        </processorPath>
+        <module name="profileservice" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="api-gateway" target="11" />
+      <module name="bookservice (1) (com.tanthanh)" target="11" />
+      <module name="bookservice (2) (com.ltfullstack)" target="17" />
+      <module name="borrowingservice (1) (com.tanthanh)" target="11" />
+      <module name="borrowingservice (2) (com.ltfullstack)" target="17" />
+      <module name="commonservice (1) (com.tanthanh)" target="11" />
+      <module name="commonservice (2) (com.ltfullstack)" target="17" />
+      <module name="configserver" target="17" />
+      <module name="discoverserver (1) (com.tanthanh)" target="11" />
+      <module name="discoverserver (2) (com.ltfullstack)" target="17" />
+      <module name="employeeservice (1) (com.tanthanh)" target="11" />
+      <module name="employeeservice (2) (com.ltfullstack)" target="17" />
+      <module name="notificationservice (1) (com.tanthanh)" target="11" />
+      <module name="notificationservice (2) (com.ltfullstacak)" target="17" />
+      <module name="userservice" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="DiscoveryServer" options="-parameters" />
+      <module name="OrdersService" options="-parameters" />
+      <module name="ProductsService" options="-parameters" />
+      <module name="UsersService" options="-parameters" />
+      <module name="api-gateway" options="-parameters" />
+      <module name="apigateway" options="-parameters" />
+      <module name="bookservice" options="-parameters" />
+      <module name="bookservice (1) (com.ltfullstack)" options="-parameters" />
+      <module name="bookservice (1) (com.tanthanh)" options="-parameters" />
+      <module name="bookservice (2) (com.ltfullstack)" options="-parameters" />
+      <module name="borrowingservice" options="-parameters" />
+      <module name="borrowingservice (1) (com.ltfullstack)" options="-parameters" />
+      <module name="borrowingservice (1) (com.tanthanh)" options="-parameters" />
+      <module name="borrowingservice (2) (com.ltfullstack)" options="-parameters" />
+      <module name="commonservice" options="-parameters" />
+      <module name="commonservice (1) (com.ltfullstack)" options="-parameters" />
+      <module name="commonservice (1) (com.tanthanh)" options="-parameters" />
+      <module name="commonservice (2) (com.ltfullstack)" options="-parameters" />
+      <module name="configserver" options="-parameters" />
+      <module name="core" options="-parameters" />
+      <module name="discoverserver" options="-parameters" />
+      <module name="discoverserver (1) (com.ltfullstack)" options="-parameters" />
+      <module name="discoverserver (1) (com.tanthanh)" options="-parameters" />
+      <module name="discoverserver (2) (com.ltfullstack)" options="-parameters" />
+      <module name="employeeservice" options="-parameters" />
+      <module name="employeeservice (1) (com.ltfullstack)" options="-parameters" />
+      <module name="employeeservice (1) (com.tanthanh)" options="-parameters" />
+      <module name="employeeservice (2) (com.ltfullstack)" options="-parameters" />
+      <module name="notificationservice" options="-parameters" />
+      <module name="notificationservice (1) (com.ltfullstacak)" options="-parameters" />
+      <module name="notificationservice (1) (com.tanthanh)" options="-parameters" />
+      <module name="notificationservice (2) (com.ltfullstacak)" options="-parameters" />
+      <module name="paymentservice" options="-parameters" />
+      <module name="profileservice" options="-parameters -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.defaultComponentModel=spring -Amapstruct.verbose=true" />
+      <module name="userservice" options="-parameters" />
+    </option>
+  </component>
+</project>

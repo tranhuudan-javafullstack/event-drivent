@@ -1,6 +1,5 @@
 package com.huudan.gatewayserver.handler;
 
-import com.eazybytes.gatewayserver.dto.*;
 import com.huudan.gatewayserver.dto.*;
 import com.huudan.gatewayserver.service.client.CustomerSummaryClient;
 import lombok.RequiredArgsConstructor;

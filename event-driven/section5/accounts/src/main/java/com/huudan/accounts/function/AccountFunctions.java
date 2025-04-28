@@ -15,8 +15,8 @@ public class AccountFunctions {
     @Bean
     public Consumer<MobileNumberUpdateDto> updateAccountMobileNumber(IAccountsService iAccountsService) {
         return (mobileNumberUpdateDto) -> {
-               log.info("Received  updateAccountMobileNumber request  for the details: {}", mobileNumberUpdateDto);
-                iAccountsService.updateMobileNumber(mobileNumberUpdateDto);
+            log.info("Received  updateAccountMobileNumber request  for the details: {}", mobileNumberUpdateDto);
+            iAccountsService.updateMobileNumber(mobileNumberUpdateDto);
         };
     }
 

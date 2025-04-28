@@ -6,6 +6,9 @@ import com.huudan.cards.dto.ResponseDto;
 import com.huudan.cards.service.ICardsService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -19,18 +22,17 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
+
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class CardsController {
 
-    private final ICardsService iCardsService;
-
-    public CardsController(ICardsService iCardsService) {
-        this.iCardsService = iCardsService;
-    }
+    ICardsService iCardsService;
 
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> createCard(@Valid @RequestParam("mobileNumber")
-    @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
-    String mobileNumber) {
+                                                  @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
+                                                  String mobileNumber) {
         iCardsService.createCard(mobileNumber);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
@@ -39,8 +41,8 @@ public class CardsController {
 
     @GetMapping("/fetch")
     public ResponseEntity<CardsDto> fetchCardDetails(@RequestParam("mobileNumber")
-    @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
-    String mobileNumber) {
+                                                     @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
+                                                     String mobileNumber) {
         CardsDto cardsDto = iCardsService.fetchCard(mobileNumber);
         return ResponseEntity.status(HttpStatus.OK).body(cardsDto);
     }
@@ -61,7 +63,7 @@ public class CardsController {
 
     @PatchMapping("/delete")
     public ResponseEntity<ResponseDto> deleteCardDetails(@RequestParam("cardNumber")
-    Long cardNumber) {
+                                                         Long cardNumber) {
         boolean isDeleted = iCardsService.deleteCard(cardNumber);
         if (isDeleted) {
             return ResponseEntity

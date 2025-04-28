@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/event-driven/section1/accounts/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section1/cards/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section1/customer/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section1/eazy-bom/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section1/eurekaserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section1/gatewayserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section1/loans/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section3/accounts/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section3/cards/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section3/customer/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section3/eazy-bom/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section3/eazy-bom/common/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section3/eurekaserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section3/gatewayserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section3/loans/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section4/accounts/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section4/cards/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section4/customer/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section4/eazy-bom/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section4/eazy-bom/common/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section4/eurekaserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section4/gatewayserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section4/loans/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section4/profile/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section5/accounts/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section5/cards/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section5/customer/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section5/eazy-bom/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section5/eurekaserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section5/gatewayserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section5/loans/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section6/accounts/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section6/cards/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section6/customer/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section6/eazy-bom/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section6/eazy-bom/common/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section6/eurekaserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section6/gatewayserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section6/loans/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section7/accounts/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section7/cards/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section7/customer/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section7/eazy-bom/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section7/eazy-bom/common/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section7/eurekaserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section7/gatewayserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-driven/section7/loans/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project1/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project1/bookservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project1/borrowingservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project1/commonservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project1/configserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project1/discoverserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project1/employeeservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project1/notificationservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project1/userservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project2/coreservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project2/discoveryserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project2/orderservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project2/paymentservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project2/productservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project2/userservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project3/apigateway/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project3/bookservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project3/borrowingservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project3/commonservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project3/discoverserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project3/employeeservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project3/notificationservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/project1/apigateway/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/microservice-eventsourcing/apigateway/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/microservice-eventsourcing/bookservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/microservice-eventsourcing/borrowingservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/microservice-eventsourcing/commonservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/microservice-eventsourcing/discoverserver/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/microservice-eventsourcing/employeeservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/microservice-eventsourcing/notificationservice/pom.xml" />
+        <option value="$PROJECT_DIR$/event-sourcing/microservice-eventsourcing/profileservice/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

@@ -6,6 +6,9 @@ import com.huudan.customer.dto.ResponseDto;
 import com.huudan.customer.service.ICustomerService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -16,13 +19,13 @@ import java.util.UUID;
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
+
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class CustomerController {
 
-    private final ICustomerService iCustomerService;
+    ICustomerService iCustomerService;
 
-    public CustomerController(ICustomerService iCustomerService) {
-        this.iCustomerService = iCustomerService;
-    }
 
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> createCustomer(@Valid @RequestBody CustomerDto customerDto) {
@@ -35,8 +38,8 @@ public class CustomerController {
 
     @GetMapping("/fetch")
     public ResponseEntity<CustomerDto> fetchCustomerDetails(@RequestParam("mobileNumber")
-    @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
-    String mobileNumber) {
+                                                            @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
+                                                            String mobileNumber) {
         CustomerDto fetchedCustomer = iCustomerService.fetchCustomer(mobileNumber);
         return ResponseEntity.status(org.springframework.http.HttpStatus.OK).body(fetchedCustomer);
     }
@@ -58,8 +61,8 @@ public class CustomerController {
 
     @PatchMapping("/delete")
     public ResponseEntity<ResponseDto> deleteCustomer(@RequestParam("customerId")
-    @Pattern(regexp = "(^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$)",
-            message = "CustomerId is invalid") String customerId) {
+                                                      @Pattern(regexp = "(^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[1-5][0-9a-fA-F]{3}-[89abAB][0-9a-fA-F]{3}-[0-9a-fA-F]{12}$)",
+                                                              message = "CustomerId is invalid") String customerId) {
         boolean isDeleted = iCustomerService.deleteCustomer(customerId);
         if (isDeleted) {
             return ResponseEntity

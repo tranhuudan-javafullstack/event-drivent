@@ -8,7 +8,9 @@ import com.huudan.accounts.dto.AccountsDto;
 import com.huudan.accounts.dto.ResponseDto;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -21,10 +23,12 @@ import java.util.Random;
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
+
 @RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class AccountsCommandController {
 
-    private final CommandGateway commandGateway;
+    CommandGateway commandGateway;
 
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> createAccount(@RequestParam("mobileNumber")

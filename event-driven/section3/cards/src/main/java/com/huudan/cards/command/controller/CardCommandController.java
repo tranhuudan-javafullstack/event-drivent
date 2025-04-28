@@ -9,7 +9,9 @@ import com.huudan.cards.dto.CardsDto;
 import com.huudan.cards.dto.ResponseDto;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -23,17 +25,18 @@ import java.util.Random;
  * @author Eazy Bytes
  */
 
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
-@RequiredArgsConstructor
 public class CardCommandController {
 
-    private final CommandGateway commandGateway;
+    CommandGateway commandGateway;
 
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> createCard(@RequestParam("mobileNumber")
-    @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits") String mobileNumber) {
+                                                  @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits") String mobileNumber) {
         long randomCardNumber = 1000000000L + new Random().nextInt(900000000);
         CreateCardCommand createCommand = CreateCardCommand.builder()
                 .cardNumber(randomCardNumber).mobileNumber(mobileNumber)

@@ -2,6 +2,9 @@ package com.appsdeveloperblog.estore.ProductsService.query.rest;
 
 import java.util.List;
 
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,20 +16,19 @@ import com.appsdeveloperblog.estore.ProductsService.query.FindProductsQuery;
 
 @RestController
 @RequestMapping("/products")
+
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class ProductsQueryController {
 	
-	@Autowired
 	QueryGateway queryGateway;
 	
 	@GetMapping
 	public List<ProductRestModel> getProducts() {
 		
 		FindProductsQuery findProductsQuery = new FindProductsQuery();
-		List<ProductRestModel> products = queryGateway.query(findProductsQuery,
+		return  queryGateway.query(findProductsQuery,
 				ResponseTypes.multipleInstancesOf(ProductRestModel.class)).join();
-		
-		return products;
-		
 		
 	}
 

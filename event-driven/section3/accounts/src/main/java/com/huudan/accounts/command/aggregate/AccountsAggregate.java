@@ -6,6 +6,7 @@ import com.huudan.accounts.command.UpdateAccountCommand;
 import com.huudan.accounts.command.event.AccountCreatedEvent;
 import com.huudan.accounts.command.event.AccountDeletedEvent;
 import com.huudan.accounts.command.event.AccountUpdatedEvent;
+import lombok.NoArgsConstructor;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
@@ -14,6 +15,7 @@ import org.axonframework.spring.stereotype.Aggregate;
 import org.springframework.beans.BeanUtils;
 
 @Aggregate
+@NoArgsConstructor
 public class AccountsAggregate {
 
     @AggregateIdentifier
@@ -23,9 +25,6 @@ public class AccountsAggregate {
     private String branchAddress;
     private boolean activeSw;
     private String errorMsg;
-
-    public AccountsAggregate() {
-    }
 
     @CommandHandler
     public AccountsAggregate(CreateAccountCommand createCommand) {

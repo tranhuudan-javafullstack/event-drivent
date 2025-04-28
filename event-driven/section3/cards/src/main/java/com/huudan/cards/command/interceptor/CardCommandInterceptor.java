@@ -8,7 +8,9 @@ import com.huudan.cards.entity.Cards;
 import com.huudan.cards.exception.CardAlreadyExistsException;
 import com.huudan.cards.exception.ResourceNotFoundException;
 import com.huudan.cards.repository.CardsRepository;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.axonframework.commandhandling.CommandMessage;
 import org.axonframework.messaging.MessageDispatchInterceptor;
 import org.springframework.stereotype.Component;
@@ -18,11 +20,12 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.BiFunction;
 
-@Component
 @RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@Component
 public class CardCommandInterceptor implements MessageDispatchInterceptor<CommandMessage<?>> {
 
-    private final CardsRepository cardsRepository;
+    CardsRepository cardsRepository;
 
     @Nonnull
     @Override

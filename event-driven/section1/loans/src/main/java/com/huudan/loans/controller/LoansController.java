@@ -6,6 +6,9 @@ import com.huudan.loans.dto.ResponseDto;
 import com.huudan.loans.service.ILoansService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Pattern;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -19,18 +22,17 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
+
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class LoansController {
 
-    private final ILoansService iLoansService;
-
-    public LoansController(ILoansService iLoansService) {
-        this.iLoansService = iLoansService;
-    }
+    ILoansService iLoansService;
 
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> createLoan(@RequestParam("mobileNumber")
-    @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
-    String mobileNumber) {
+                                                  @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
+                                                  String mobileNumber) {
         iLoansService.createLoan(mobileNumber);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
@@ -39,8 +41,8 @@ public class LoansController {
 
     @GetMapping("/fetch")
     public ResponseEntity<LoansDto> fetchLoanDetails(@RequestParam("mobileNumber")
-    @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
-    String mobileNumber) {
+                                                     @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
+                                                     String mobileNumber) {
         LoansDto loansDto = iLoansService.fetchLoan(mobileNumber);
         return ResponseEntity.status(HttpStatus.OK).body(loansDto);
     }
@@ -62,7 +64,7 @@ public class LoansController {
 
     @PatchMapping("/delete")
     public ResponseEntity<ResponseDto> deleteLoanDetails(@RequestParam("loanNumber")
-    Long loanNumber) {
+                                                         Long loanNumber) {
         boolean isDeleted = iLoansService.deleteLoan(loanNumber);
         if (isDeleted) {
             return ResponseEntity

@@ -1,9 +1,10 @@
 package com.huudan.gatewayserver.handler;
 
-import com.eazybytes.gatewayserver.dto.*;
 import com.huudan.gatewayserver.dto.*;
 import com.huudan.gatewayserver.service.client.CustomerSummaryClient;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
@@ -12,11 +13,12 @@ import org.springframework.web.reactive.function.server.ServerRequest;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
-@Component
 @RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@Component
 public class CustomerCompositeHandler {
 
-    private final CustomerSummaryClient customerSummaryClient;
+    CustomerSummaryClient customerSummaryClient;
 
     public Mono<ServerResponse> fetchCustomerSummary(ServerRequest serverRequest) {
         String mobileNumber = serverRequest.queryParam("mobileNumber").get();

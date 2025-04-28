@@ -8,19 +8,21 @@ import com.huudan.cards.exception.ResourceNotFoundException;
 import com.huudan.cards.mapper.CardsMapper;
 import com.huudan.cards.repository.CardsRepository;
 import com.huudan.cards.service.ICardsService;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.Random;
 
 @Service
+
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class CardsServiceImpl implements ICardsService {
 
-    private final CardsRepository cardsRepository;
-
-    public CardsServiceImpl(CardsRepository cardsRepository) {
-        this.cardsRepository = cardsRepository;
-    }
+    CardsRepository cardsRepository;
 
     /**
      * @param mobileNumber - Mobile Number of the Customer

@@ -3,15 +3,18 @@ package com.huudan.cards.query.handler;
 import com.huudan.cards.dto.CardsDto;
 import com.huudan.cards.query.FindCardQuery;
 import com.huudan.cards.service.ICardsService;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.axonframework.queryhandling.QueryHandler;
 import org.springframework.stereotype.Component;
 
-@Component
 @RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@Component
 public class CardQueryHandler {
 
-    private final ICardsService iCardsService;
+    ICardsService iCardsService;
 
     @QueryHandler
     public CardsDto findCard(FindCardQuery query) {

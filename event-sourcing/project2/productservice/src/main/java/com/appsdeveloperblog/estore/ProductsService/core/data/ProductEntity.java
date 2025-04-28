@@ -15,11 +15,6 @@ import lombok.Data;
 @Data
 public class ProductEntity implements Serializable {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = -227264951080660124L;
-	
 	@Id
 	@Column(unique=true)
 	private String productId;

@@ -5,18 +5,21 @@ import com.huudan.cards.command.event.CardDeletedEvent;
 import com.huudan.cards.command.event.CardUpdatedEvent;
 import com.huudan.cards.entity.Cards;
 import com.huudan.cards.service.ICardsService;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
-@Component
 @RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@Component
 @ProcessingGroup("card-group")
 public class CardProjection {
 
-    private final ICardsService iCardsService;
+    ICardsService iCardsService;
 
     @EventHandler
     public void on(CardCreatedEvent event) {

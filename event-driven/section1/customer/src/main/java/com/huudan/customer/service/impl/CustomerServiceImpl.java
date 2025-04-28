@@ -8,18 +8,20 @@ import com.huudan.customer.exception.ResourceNotFoundException;
 import com.huudan.customer.mapper.CustomerMapper;
 import com.huudan.customer.repository.CustomerRepository;
 import com.huudan.customer.service.ICustomerService;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
 @Service
+
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class CustomerServiceImpl implements ICustomerService {
 
-    private final CustomerRepository customerRepository;
-
-    public CustomerServiceImpl(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
-    }
+    CustomerRepository customerRepository;
 
     @Override
     public void createCustomer(CustomerDto customerDto) {
@@ -31,7 +33,7 @@ public class CustomerServiceImpl implements ICustomerService {
             throw new CustomerAlreadyExistsException("Customer already registered with given mobileNumber "
                     + customerDto.getMobileNumber());
         }
-         customerRepository.save(customer);
+        customerRepository.save(customer);
     }
 
     @Override

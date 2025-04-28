@@ -8,19 +8,21 @@ import com.huudan.loans.exception.ResourceNotFoundException;
 import com.huudan.loans.mapper.LoansMapper;
 import com.huudan.loans.repository.LoansRepository;
 import com.huudan.loans.service.ILoansService;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.Random;
 
 @Service
+
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class LoansServiceImpl implements ILoansService {
 
-    private final LoansRepository loansRepository;
-
-    public LoansServiceImpl(LoansRepository loansRepository) {
-        this.loansRepository = loansRepository;
-    }
+    LoansRepository loansRepository;
 
     /**
      * @param mobileNumber - Mobile Number of the Customer

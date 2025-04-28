@@ -6,6 +6,7 @@ import com.huudan.cards.command.UpdateCardCommand;
 import com.huudan.cards.command.event.CardCreatedEvent;
 import com.huudan.cards.command.event.CardDeletedEvent;
 import com.huudan.cards.command.event.CardUpdatedEvent;
+import lombok.NoArgsConstructor;
 import org.axonframework.commandhandling.CommandHandler;
 import org.axonframework.eventsourcing.EventSourcingHandler;
 import org.axonframework.modelling.command.AggregateIdentifier;
@@ -14,6 +15,7 @@ import org.axonframework.spring.stereotype.Aggregate;
 import org.springframework.beans.BeanUtils;
 
 @Aggregate
+@NoArgsConstructor
 public class CardAggregate {
 
     @AggregateIdentifier
@@ -24,9 +26,6 @@ public class CardAggregate {
     private int amountUsed;
     private int availableAmount;
     private boolean activeSw;
-
-    public CardAggregate() {
-    }
 
     @CommandHandler
     public CardAggregate(CreateCardCommand createCommand) {

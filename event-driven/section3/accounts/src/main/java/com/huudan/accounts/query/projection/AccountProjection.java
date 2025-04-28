@@ -5,18 +5,20 @@ import com.huudan.accounts.command.event.AccountDeletedEvent;
 import com.huudan.accounts.command.event.AccountUpdatedEvent;
 import com.huudan.accounts.entity.Accounts;
 import com.huudan.accounts.service.IAccountsService;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.axonframework.config.ProcessingGroup;
 import org.axonframework.eventhandling.EventHandler;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
-@Component
 @RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@Component
 @ProcessingGroup("account-group")
 public class AccountProjection {
-
-    private final IAccountsService iAccountsService;
+    IAccountsService iAccountsService;
 
     @EventHandler
     public void on(AccountCreatedEvent event) {

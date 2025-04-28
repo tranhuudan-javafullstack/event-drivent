@@ -9,7 +9,9 @@ import com.huudan.accounts.exception.AccountAlreadyExistsException;
 import com.huudan.accounts.exception.ResourceNotFoundException;
 import com.huudan.accounts.repository.AccountsRepository;
 import jakarta.annotation.Nonnull;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.axonframework.commandhandling.CommandMessage;
 import org.axonframework.messaging.MessageDispatchInterceptor;
 import org.springframework.stereotype.Component;
@@ -18,11 +20,12 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.BiFunction;
 
-@Component
 @RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@Component
 public class AccountsCommandInterceptor implements MessageDispatchInterceptor<CommandMessage<?>> {
 
-    private final AccountsRepository accountsRepository;
+    AccountsRepository accountsRepository;
 
     @Nonnull
     @Override
@@ -35,7 +38,7 @@ public class AccountsCommandInterceptor implements MessageDispatchInterceptor<Co
                         createAccountCommand.getMobileNumber(), true);
                 if (optionalAccounts.isPresent()) {
                     throw new AccountAlreadyExistsException("Account already created with given mobileNumber "
-                                                            + createAccountCommand.getMobileNumber());
+                            + createAccountCommand.getMobileNumber());
                 }
             } else if (UpdateAccountCommand.class.equals(command.getPayloadType())) {
                 UpdateAccountCommand updateAccountCommand = (UpdateAccountCommand) command.getPayload();

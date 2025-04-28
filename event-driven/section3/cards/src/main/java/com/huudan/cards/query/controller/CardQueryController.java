@@ -3,7 +3,9 @@ package com.huudan.cards.query.controller;
 import com.huudan.cards.dto.CardsDto;
 import com.huudan.cards.query.FindCardQuery;
 import jakarta.validation.constraints.Pattern;
+import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 import org.axonframework.messaging.responsetypes.ResponseTypes;
 import org.axonframework.queryhandling.QueryGateway;
 import org.springframework.http.MediaType;
@@ -14,17 +16,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+@RequiredArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 @RestController
 @RequestMapping(path = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
-@RequiredArgsConstructor
 public class CardQueryController {
 
-    private final QueryGateway queryGateway;
+    QueryGateway queryGateway;
 
     @GetMapping("/fetch")
     public ResponseEntity<CardsDto> fetchCardDetails(@RequestParam("mobileNumber")
-    @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits") String mobileNumber) {
+                                                     @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits") String mobileNumber) {
         FindCardQuery findCardQuery = new FindCardQuery(mobileNumber);
         CardsDto card = queryGateway.query(findCardQuery, ResponseTypes.instanceOf(CardsDto.class)).join();
         return ResponseEntity.status(org.springframework.http.HttpStatus.OK).body(card);
